@@ -1,3 +1,4 @@
 prefect==2.14.16
 raggy[chroma]
 trafilatura
+git+https://github.com/LukasMasuch/streamlit-pydantic.git  # For pydantic v2 fixes with pydantic-settings
