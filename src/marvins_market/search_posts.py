@@ -16,12 +16,10 @@ async def query_blogs(query: str, collection_name: str = "testing"):
             n_results=10,
             include=["metadatas", "distances"],
         )
-        # Extract the first (and only) list inside 'documents'
         pages = result.get("metadatas")[0]
         distances = result.get("distances")[0]
 
         for metadata, distance in zip(pages, distances):
-            # Cosine Similiarity is calculated as 1 - Cosine Distance
             print(metadata)
             print(f"distance: {1 - distance}")
 
